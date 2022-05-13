@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	   xmlns:context="http://www.springframework.org/schema/context" 
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context.xsd" >
+       
+       <context:annotation-config/>
+       
+       <bean id="userConsole" class="com.pos.console.UserConsole">
+       		<constructor-arg ref="user"/>
+	       	<constructor-arg ref="userService"/>
+       </bean>
+       <bean id="salesConsole" class="com.pos.console.SalesConsole"></bean>
+       <bean id="stockConsole" class="com.pos.console.StockConsole">
+       		<constructor-arg ref="stock"/>
+	       	<constructor-arg ref="stockService"/>
+       </bean>
+     
+       <bean id="stockService" class="com.pos.service.StockServiceImpl"></bean>
+       <bean id="userService" class="com.pos.service.UserServiceImpl"></bean>
+       <bean id="salesServiceImpl" class="com.pos.service.SalesServiceImpl">
+	       	<constructor-arg ref="sales"/>
+	       	<constructor-arg ref="stockService"/>
+       </bean>
+
+       <bean id="stock" class="com.pos.dto.Stock"></bean>
+       <bean id="user" class="com.pos.dto.User"></bean>
+       <bean id="sales" class="com.pos.dto.Sales"></bean>
+       
+</beans>
