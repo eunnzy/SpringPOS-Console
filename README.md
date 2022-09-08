@@ -2,7 +2,8 @@
  <h3>스프링 기반 POS 프로그램(Console version)</h3>
 
 
-<사용자 화면>
+<h2> 프로그램 실행 화면</h2>
+
 ![슬라이드2](https://user-images.githubusercontent.com/87024571/189044839-be94ec80-bc0f-4fea-9e56-e45156c20034.PNG)
 ![슬라이드3](https://user-images.githubusercontent.com/87024571/189044849-bfc3b0a1-dbaf-41cf-ab11-31259dfb15f4.PNG)
 ![슬라이드4](https://user-images.githubusercontent.com/87024571/189044859-31fe9a4c-11e2-421c-889c-f4914251e1f3.PNG)
